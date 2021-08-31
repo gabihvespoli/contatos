@@ -1,14 +1,6 @@
 <main>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
-  <app-contato></app-contato>
+  <app-contato
+    *ngFor="let contato of contatos"
+    [contato]="contato"
+  ></app-contato>
 </main>
