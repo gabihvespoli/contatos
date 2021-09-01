@@ -1,3 +1,6 @@
-<app-menu (emissor)="listen()"></app-menu>
+<app-menu (onAbrirClick)="listenAbrir()"></app-menu>
 <app-lista-de-contatos></app-lista-de-contatos>
-<app-create-contato *ngIf="mostrandoModal"></app-create-contato>
+<app-create-contato
+  (onCancelarClick)="listenCancelar()"
+  *ngIf="mostrandoModal"
+></app-create-contato>

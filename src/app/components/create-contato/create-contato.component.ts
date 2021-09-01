@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-create-contato',
   templateUrl: './create-contato.component.html',
-  styleUrls: ['./create-contato.component.css']
+  styleUrls: ['./create-contato.component.css'],
 })
 export class CreateContatoComponent implements OnInit {
+  @Output() onCancelarClick: EventEmitter<null> = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  cancelar() {
+    console.log('pediu para cancelar');
+    this.onCancelarClick.emit();
   }
-
 }

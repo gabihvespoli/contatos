@@ -9,8 +9,13 @@ export class AppComponent {
   title = 'contatos';
   mostrandoModal = false;
 
-  listen() {
+  listenAbrir() {
     console.log('escutei');
     this.mostrandoModal = true;
+  }
+
+  listenCancelar() {
+    console.log('escutei');
+    this.mostrandoModal = false;
   }
 }

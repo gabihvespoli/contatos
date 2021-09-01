@@ -6,7 +6,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
-  @Output() emissor: EventEmitter<null> = new EventEmitter();
+  @Output() onAbrirClick: EventEmitter<null> = new EventEmitter();
 
   constructor() {}
 
@@ -14,6 +14,6 @@ export class MenuComponent implements OnInit {
 
   mostrarModal() {
     console.log('abriu modal');
-    this.emissor.emit();
+    this.onAbrirClick.emit();
   }
 }
